@@ -1,0 +1,21 @@
+<div class="container col-lg-6">
+    <h1 class="text-center">Login</h1>
+    <div class="card">
+      <div class="card-body">
+        <form class="form-group">
+          <div class="form-group">
+            <label for="email">User Name :</label>
+            <input type="email" class="form-control" [(ngModel)]="user.email" id="username"  placeholder="Enter User Name"
+              name="username">
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" [(ngModel)]="user.password"  id="password" placeholder="Enter password"
+              name="password">
+          </div>
+          <button (click)="onSubmit()" class="btn btn-success">Login</button>
+        </form>
+      
+      </div>
+    </div>
+  </div>

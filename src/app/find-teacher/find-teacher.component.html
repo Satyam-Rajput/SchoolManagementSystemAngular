@@ -1,0 +1,153 @@
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <div class="sb-sidenav-menu-heading"></div>
+                    <a class="nav-link" routerLink="/admin">
+                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <b>Dashboard</b>
+                    </a>
+                    <div class="sb-sidenav-menu-heading">Teacher</div>
+
+                    <a class="nav-link" routerLink="/add-teacher">
+                        <div class="sb-nav-link-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                        Add Teachers
+                    </a><a class="nav-link" routerLink="/display-teacher">
+                        <div class="sb-nav-link-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                        Display Teacher Details
+                    </a>
+                    <a class="nav-link" routerLink="/find-teacher">
+                        <div class="sb-nav-link-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        Find Teacher Details
+                    </a>
+
+                    <div class="sb-sidenav-menu-heading">Student</div>
+
+                    <a class="nav-link" routerLink="/add-student">
+                        <div class="sb-nav-link-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                        Add Students
+                    </a><a class="nav-link" routerLink="/display-student">
+                        <div class="sb-nav-link-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                        Display Student Details
+                    </a>
+                    <a class="nav-link" routerLink="/find-student">
+                        <div class="sb-nav-link-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        Find Student Details
+                    </a>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+<div class="container" style="margin-left: 25%;">
+   
+    <div class="col-md-offset-2 col-md-7">
+        <h2 class="text-center">Find Teacher</h2>
+        <div class="panel panel-info">
+            <div class="panel-body">
+                <form action="getTeacher" cssClass="form-horizontal"
+                    method="post" >
+
+                    
+                    <div class="form-group">
+                        <label for="id" class="col-md-3 control-label">
+                        <div><b>Enter Id</b></div></label>
+                        <div class="col-md-9">
+                            <input type="number" [(ngModel)]="teacherId" id="teacherId" name="teacherId" required/>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="form-group">
+                        <!-- Button -->
+                        <div class="col-md-offset-3 col-md-9">
+                            <input type="submit" (click)="onSubmit()" value="find"/>
+                        </div>
+                    </div>
+
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+<br/><br/>
+<div class="container " *ngIf="teacher!=null">
+		
+			
+			
+    
+
+        
+        <div class="row">
+       
+
+
+      
+        
+        	
+
+<div  class="card text-center sb-sidenav-dark">
+<div class="card-header  text-light sb-sidenav-dark">
+<h5> Teacher Details</h5>
+</div>
+
+<div class="card-body">
+<br/>
+<div class="row text-left">
+
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Name:</div>
+<div class="col-md-3 text-light">{{teacher.firstName}}&nbsp;{{teacher.lastName}}</div>
+<div class="col-md-3"></div></div><br/>
+
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Email ID :</div>
+<div class="col-md-3 text-light">{{teacher.email}}</div>
+<div class="col-md-3"></div></div><br/>
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Contact No :</div>
+<div class="col-md-3 text-light">{{teacher.phoneNumber}}</div>
+<div class="col-md-3"></div></div><br/>
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Address :</div>
+<div class="col-md-4 text-light">{{teacher.houseNumber}},&nbsp;{{teacher.streetName}},&nbsp;{{teacher.city}},&nbsp;{{teacher.state}},&nbsp;{{teacher.country}}-{{teacher.pincode}}</div>
+<div class="col-md-2"></div></div><br/>
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Date Of Birth :</div>
+<div class="col-md-3 text-light">{{teacher.dateOfBirth}}</div>
+<div class="col-md-3"></div></div><br/>
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Date Of Joining :</div>
+<div class="col-md-3 text-light">{{teacher.dateofJoining}}</div>
+<div class="col-md-3"></div></div><br/>
+
+
+<div class="row ">
+<div class="col-md-2"></div>
+<div class="col-md-2"></div>
+<div class="col-md-2 text-light text-left"><a  class="btn btn-primary badge-pill" style="width:100px" href="/">Update</a></div>
+
+<div class="col-md-2 text-light text-left"><a  class="btn btn-danger badge-pill" style="width:100px" href="/"
+                    onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a></div>
+<div class="col-md-4"></div></div>
+</div>
+</div>
+
+
+			
+        
+        
+    
+    
+</div>

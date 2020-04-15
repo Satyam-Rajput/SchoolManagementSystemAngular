@@ -1,0 +1,132 @@
+<div id="layoutSidenav">
+   <div id="layoutSidenav_nav">
+       <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+           <div class="sb-sidenav-menu">
+               <div class="nav">
+                   <div class="sb-sidenav-menu-heading"></div>
+                   <a class="nav-link" routerLink="/admin">
+                       <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                       <b>Dashboard</b>
+                   </a>
+                   <div class="sb-sidenav-menu-heading">Teacher</div>
+
+                   <a class="nav-link" routerLink="/add-teacher">
+                       <div class="sb-nav-link-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                       Add Teachers
+                   </a><a class="nav-link" routerLink="/display-teacher">
+                       <div class="sb-nav-link-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                       Display Teacher Details
+                   </a>
+                   <a class="nav-link" routerLink="/find-teacher">
+                       <div class="sb-nav-link-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                       Find Teacher Details
+                   </a>
+
+                   <div class="sb-sidenav-menu-heading">Student</div>
+
+                   <a class="nav-link" routerLink="/add-student">
+                       <div class="sb-nav-link-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                       Add Students
+                   </a><a class="nav-link" routerLink="/display-student">
+                       <div class="sb-nav-link-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                       Display Student Details
+                   </a>
+                   <a class="nav-link" routerLink="/find-student">
+                       <div class="sb-nav-link-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                       Find Student Details
+                   </a>
+
+               </div>
+           </div>
+       </nav>
+   </div>
+   
+
+<div><form id="registrationform" >
+<div class="wrapper">
+    <div class="title">
+      Register Teacher
+    </div>
+    <div class="form">
+       <div class="inputfield">
+          <label>First Name</label>
+          <input type="text" class="input" [(ngModel)]="teacher.firstName" id="firstName" name="firstName">
+       </div>  
+        <div class="inputfield">
+          <label>Last Name</label>
+          <input type="text" class="input" [(ngModel)]="teacher.lastName" id="lastName" name="lastName">
+       </div>  
+       <div class="inputfield">
+          <label>Password</label>
+          <input type="password" class="input" [(ngModel)]="teacher.password" id="password" name="password">
+       </div>  
+      <div class="inputfield">
+          <label>Confirm Password</label>
+          <input type="password" [(ngModel)]="confirmPassword" class="input" name="confirmPassword">
+       </div> 
+        
+       
+        <div class="inputfield">
+          <label>Email Address</label>
+          <input type="text" class="input" [(ngModel)]="teacher.email" id="email" name="email">
+       </div> 
+       <div class="inputfield">
+          <label>Data of Birth</label>
+          <input type="date" id="dateOfBirth" [(ngModel)]="teacher.dateOfBirth" value="1994-01-01" max="2016-12-31" name="dateOfBirth" class="input">
+       </div> 
+      <div class="inputfield">
+          <label>Phone Number</label>
+          <input type="text" class="input" id="phone" [(ngModel)]="teacher.phoneNumber" name="phoneNumber">
+       </div> 
+      <div class="inputfield">
+          <label>House number</label>
+          <input type="number" class="input" id="houseNumber" [(ngModel)]="teacher.houseNumber" name="houseNumber">
+       </div> 
+        <div class="inputfield">
+          <label>Street</label>
+          <input type="text" class="input" id="streetName" [(ngModel)]="teacher.streetName" name="streetName">
+       </div> 
+       <div class="inputfield">
+          <label>City</label>
+          <div class="custom_select" >
+            <select [(ngModel)]="teacher.city" name="city">
+             <option value="Bangalore" selected="selected">Bangalore</option>
+			<option value="Chennai">Chennai</option>
+			<option value="Delhi">Delhi</option>
+			<option value="Kolkatta">Kolakatta</option>
+			<option value="Mumbai">Mumbai</option>
+            </select>
+          </div>
+       </div> 
+       <div class="inputfield">
+          <label>State</label>
+          <div class="custom_select" >
+            <select [(ngModel)]="teacher.state" name="state">
+              <option value="UP" selected="selected">UP</option>
+				<option value="MP">MP</option>
+				<option value="UK">UK</option>
+            </select>
+          </div>
+       </div> 
+       <div class="inputfield">
+          <label>Country</label>
+          <div class="custom_select" >
+            <select [(ngModel)]="teacher.country" name="country">
+              <option value="India" selected="selected">India</option>
+				<option value="Nepal">Nepal</option>
+				<option value="US">US</option>
+            </select>
+          </div>
+       </div> 
+      <div class="inputfield">
+          <label>Postal Code</label>
+          <input type="text" class="input" [(ngModel)]="teacher.pincode" id="pincode" name="pincode">
+       </div> 
+      <div class="inputfield">
+        <input type="submit" value="ADD TEACHER" class="btn" id="submit" name="submit" (click)="onSubmit()">
+      </div>
+    </div>
+</div>
+</form>
+</div>
+</div>

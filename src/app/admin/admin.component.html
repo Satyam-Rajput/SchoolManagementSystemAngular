@@ -1,0 +1,66 @@
+<div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            <div class="sb-sidenav-menu">
+                <div class="nav">
+                    <div class="sb-sidenav-menu-heading"></div>
+                    <a class="nav-link" routerLink="/admin">
+                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <b>Dashboard</b>
+                    </a>
+                    <div class="sb-sidenav-menu-heading">Teacher</div>
+
+                    <a class="nav-link" routerLink="/add-teacher">
+                        <div class="sb-nav-link-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                        Add Teachers
+                    </a><a class="nav-link" routerLink="/display-teacher">
+                        <div class="sb-nav-link-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                        Display Teacher Details
+                    </a>
+                    <a class="nav-link" routerLink="/find-teacher">
+                        <div class="sb-nav-link-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        Find Teacher Details
+                    </a>
+
+                    <div class="sb-sidenav-menu-heading">Student</div>
+
+                    <a class="nav-link" routerLink="/add-student">
+                        <div class="sb-nav-link-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
+                        Add Students
+                    </a><a class="nav-link" routerLink="/display-student">
+                        <div class="sb-nav-link-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
+                        Display Student Details
+                    </a>
+                    <a class="nav-link" routerLink="/find-student">
+                        <div class="sb-nav-link-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+                        Find Student Details
+                    </a>
+                   
+                    
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main>
+
+        <div class="row">
+            <div class="col-md-6 my-3">
+                <div class=" sb-sidenav-dark px-3 py-3">
+                    <h4 class="mb-2">Total Number of Teachers
+                        : {{user1}}</h4>
+    
+                </div>
+            </div>
+            <div class="col-md-6 my-3">
+                <div class=" sb-sidenav-dark px-3 py-3">
+                    <h4 class="mb-2">Total Number of Students
+                        : {{user1.email}}</h4>
+    
+                </div>
+            </div>
+        </div>
+    </main>
+  
+</div>
+
+    
