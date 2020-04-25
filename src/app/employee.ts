@@ -3,7 +3,7 @@ export class Employee {
     firstName:string;
     lastName:string;
     dateOfBirth:Date;
-    dateOfJoining:Date;
+    dateofJoining:Date;
     email:string;
     phoneNumber:number;
     password:string;

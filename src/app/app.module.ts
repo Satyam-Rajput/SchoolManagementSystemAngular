@@ -20,6 +20,13 @@ import { AddStudentComponent } from './add-student/add-student.component';
 import { FindStudentComponent } from './find-student/find-student.component';
 import { FindTeacherComponent } from './find-teacher/find-teacher.component';
 import { FooterComponent } from './footer/footer.component';
+import { UpdateTeacherComponent } from './update-teacher/update-teacher.component';
+import { UpdateStudentComponent } from './update-student/update-student.component';
+import { ChangePasswordAdminComponent } from './change-password-admin/change-password-admin.component';
+import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { ViewStudentComponent } from './view-student/view-student.component';
+import { ViewTeacherComponent } from './view-teacher/view-teacher.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +45,14 @@ import { FooterComponent } from './footer/footer.component';
     AddStudentComponent,
     FindStudentComponent,
     FindTeacherComponent,
-    FooterComponent
+    FooterComponent,
+    UpdateTeacherComponent,
+    UpdateStudentComponent,
+    ChangePasswordAdminComponent,
+    SidebarAdminComponent,
+    AdminNavbarComponent,
+    ViewStudentComponent,
+    ViewTeacherComponent
   ],
   imports: [
     BrowserModule,

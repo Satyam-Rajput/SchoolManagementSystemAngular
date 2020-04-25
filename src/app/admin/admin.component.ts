@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router,ActivatedRoute } from '@angular/router';
 import { User } from '../user';
+import { AdminServiceService } from '../admin-service.service';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
@@ -9,17 +10,21 @@ import { User } from '../user';
 export class AdminComponent implements OnInit {
 message:string;
 user1:User;
+employeeCount:any;
+studentCount:any;
 
-  constructor(private route:ActivatedRoute,private router:Router) {
+  constructor(private route:ActivatedRoute,private router:Router,private service:AdminServiceService) {
   
-   this.user1=JSON.parse(sessionStorage.getItem("admin"));
+   
    
      
   
    }
 
   ngOnInit(): void {
- 
+    
   }
+
+  
 
 }

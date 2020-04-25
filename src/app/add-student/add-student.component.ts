@@ -11,7 +11,8 @@ export class AddStudentComponent implements OnInit {
 result:boolean;
   confirmPassword:string;
  student:Student; 
-  
+  error:string;
+  output:string;
    constructor(private router:Router,private route:ActivatedRoute,private service:AdminServiceService ) { }
 
 
@@ -20,24 +21,25 @@ result:boolean;
  
   }
 
+
   onSubmit()
   {
-    if(this.student.password==this.confirmPassword){
+    if(this.student.password==this.confirmPassword&&this.confirmPassword!=""&&this.confirmPassword!!=null){
 this.service.saveStudent(this.student).subscribe(data =>{ console.log(data);this.result=data}, error => console.log(error));
   
 if(this.result)
 {
-  alert("success")
-  this.router.navigate(['admin']);
+  this.output="successfully Registered";
+ 
 }
 else
 {
-  console.log("failure");
+  this.output="Email already exists";
 }
     }
     else
     {
-      alert("password doesn't match");
+      this.error="password doesn't match";
     }
 }
 }

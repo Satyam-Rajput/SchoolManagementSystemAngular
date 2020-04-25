@@ -1,4 +1,4 @@
-<div id="layoutSidenav">
+<!--<div id="layoutSidenav">
     <div id="layoutSidenav_nav">
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
             <div class="sb-sidenav-menu">
@@ -41,38 +41,222 @@
         </nav>
     </div>
     
+    <div class="container">
+		
+			
+			
+        <form  cssClass="form-horizontal"
+            method="post" >
 
-<div class="container">
-    <div class="col-md-offset-2 col-md-7">
-        <h2 class="text-center">Find Student</h2>
-        <div class="panel panel-info">
-            <div class="panel-body">
-                <form action="getStudent" cssClass="form-horizontal"
-                    method="post" >
-
-                    
-                    <div class="form-group">
-                        <div>
-                        <label for="id" class="col-md-3 control-label">
-                        <b>Enter Id</b>
-                        </label></div>
-                        <div class="col-md-9">
-                            <input type="number" id="studentId" name="studentId" required/>
-                        </div>
-                    </div>
-                    
-                    
-                    <div class="form-group">
-                        <!-- Button -->
-                        <div class="col-md-offset-3 col-md-9">
-                            <input type="submit" value="find"/>
-                        </div>
-                    </div>
-                    
-                </form>
+            
+            <div class="row">
+            <div class="col-md-12 ">
+<h2 class="text-center text-light">Find Details</h2></div>
+<br/><br/>
+            
+            
+            <div class="col-md-3"></div>
+            
+            <div
+            
+            class="col-md-2 text-light"
+            
+            
+            > <h4>Enter Id</h4></div>
+            
+            <div
+            class="col-md-3 "><input type="number" pattern="[0-9]" [(ngModel)]="studentId" id="studentId" name="studentId" required/>
+                </div>
+            
                 
-            </div>
-        </div>
+                <div
+            class="col-md-2 "><input (click)="onSubmit()" class="btn btn-primary badge-pill" style="width:150px" type="submit" value="Find"></div>
+            
+        </div> </form>
+            <div class="col-md-4"></div>
+            <br/>
+            
+            	
+    
+<div style="margin-bottom: 20px;" *ngIf="student!=null" class="card text-center sb-sidenav-dark">
+<div class="card-header  text-light sb-sidenav-dark">
+<h5> Student Details</h5>
+</div>
+
+<div class="card-body">
+<br/>
+<div class="row text-left">
+
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Name:</div>
+<div class="col-md-3 text-light">{{student.firstName}}&nbsp;{{student.lastName}}</div>
+<div class="col-md-3"></div></div><br/>
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Father's Name:</div>
+<div class="col-md-3 text-light">{{student.fatherName}}</div>
+<div class="col-md-3"></div></div><br/><div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Class :</div>
+<div class="col-md-3 text-light">{{student.studentClass}}</div>
+<div class="col-md-3"></div></div><br/>
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Email ID :</div>
+<div class="col-md-3 text-light">{{student.email}}</div>
+<div class="col-md-3"></div></div><br/>
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Contact No :</div>
+<div class="col-md-3 text-light">{{student.phoneNumber}}</div>
+<div class="col-md-3"></div></div><br/>
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Address :</div>
+<div class="col-md-4 text-light">{{student.houseNumber}},&nbsp;{{student.streetName}},&nbsp;{{student.city}},&nbsp;{{student.state}},&nbsp;{{student.country}}-{{student.pincode}}</div>
+<div class="col-md-2"></div></div><br/>
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Date Of Birth :</div>
+<div class="col-md-3 text-light">{{student.dateOfBirth}}</div>
+<div class="col-md-3"></div></div><br/>
+<div class="row text-left">
+<div class="col-md-3"></div>
+<div class="col-md-3 text-light">Date Of Joining :</div>
+<div class="col-md-3 text-light">{{student.dateofJoining}}</div>
+<div class="col-md-3"></div></div><br/>
+
+
+<div class="row ">
+<div class="col-md-2"></div>
+<div class="col-md-2"></div>
+<div class="col-md-2 text-light text-left"><a  class="btn btn-primary badge-pill" style="width:100px" href="">Update</a></div>
+
+<div class="col-md-2 text-light text-left"><a  class="btn btn-danger badge-pill" style="width:100px" href=""
+                        onclick="if (!(confirm('Are you sure you want to delete this customer?'))) return false">Delete</a></div>
+<div class="col-md-4"></div></div>
+</div>
+</div>
+
+
     </div>
+-->
+
+<div style="background-image: url('/assets/images/admin.jpg');height:100%;width:100%;" >
+              
+                  
+                  
+<app-admin-navbar></app-admin-navbar>
+<div id="layoutSidenav">
+
+<app-sidebar-admin></app-sidebar-admin>
+
+<div id="layoutSidenav_content">
+    <main>
+        <div class="card " style="width:85%;margin-left:7%;margin-top:1%;">
+            <div class="card-header bg-success text-light text-center font-weight-bold">
+              View Student Details
+            </div>
+            <br/>
+            <div class="card-body">
+            <form >
+            
+            <div class="row"><div class="col-sm-2 text-center"></div><div class="col-sm-2 text-right ">
+                                              <p class="text-dark font-weight-bolder">
+                                                  <label for="houseNumber">Enter Roll No:</label>
+                                              </p>
+                                          </div>
+          &nbsp;
+                                          <div class="col-sm-2 text-center">
+          
+                                              <div class="input-group mb-6 ">
+                                                  <input type="number" class="form-control"  pattern="[0-9]" [(ngModel)]="studentId" id="studentId" name="studentId"  aria-label="houseNumber"
+                                                      aria-describedby="basic-addon2" required="required">
+          
+                                              </div>
+                                          </div>
+                                          
+                                          
+                                              <div
+                                  class="col-md-2 "><input class="btn btn-success badge-pill" (click)="onSubmit()" style="width:150px" type="submit" value="Find"></div>
+                                  <div
+                                  class="col-md-2 "><div style="color: red;font-size: 15px;margin-right: 15%  "><label id="warningLabel" name="warningLabel">{{error}}</label></div></div>
+                                          </div></form>
+                                          <br/>
+                                          
+                                          
+          
+          
+          
+            <div *ngIf="student!=null">
+            
+          <div class="row text-left">
+          
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold ">Name:</div>
+          <div class="col-md-3 text-dark">{{student.firstName}}&nbsp;{{student.lastName}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Father's Name:</div>
+          <div class="col-md-3 text-dark">{{student.fatherName}}</div>
+          <div class="col-md-3"></div></div><br/><div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Class :</div>
+          <div class="col-md-3 text-dark">{{student.studentClass}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Email ID :</div>
+          <div class="col-md-3 text-dark">{{student.email}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Contact No :</div>
+          <div class="col-md-3 text-dark">{{student.phoneNumber}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Address :</div>
+          <div class="col-md-5 text-dark">{{student.houseNumber}},&nbsp;{{student.streetName}},&nbsp;{{student.city}},&nbsp;{{student.state}},&nbsp;{{student.country}}-{{student.pincode}}</div>
+          <div class="col-md-1"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Date Of Birth :</div>
+          <div class="col-md-3 text-dark">{{student.dateOfBirth}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Date Of Joining :</div>
+          <div class="col-md-3 text-dark">{{student.dateofJoining}}</div>
+          <div class="col-md-3"></div></div><br/>
+          
+          <div class="row ">
+          <div class="col-md-2"></div>
+          &nbsp;&nbsp;&nbsp;
+          <div class="col-md-3 text-dark text-center"><a  class="btn btn-primary badge-pill" style="width:100px" (click)="updateStudent(student.id)" >Update</a></div>
+          <div class="col-md-1 text-dark text-center"></div>
+          <div class="col-md-2 text-dark text-left"><a  class="btn btn-danger badge-pill" style="width:100px" (click)="deleteStudent(student.id)"
+                                              onclick="if (!(confirm('Are you sure you want to delete this Record?'))) return false">Delete</a></div>
+          <div class="col-md-4"></div></div>
+             
+                    </div>                      
+                                          
+             </div>
+          </div>
+                          
+                          
+                          
+        </main>  
+    
+<app-footer></app-footer>
 </div>
-</div>
+</div></div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  

@@ -1,26 +1,118 @@
-<div class="wrapper">
-    <h2>Contact us</h2>
-    <div id="error_message">
-       
-    </div>
-    <form action="" id="myform" onsubmit = "return validate();">
-      <div class="input_field">
-          <input type="text" placeholder="Name" id="name">
-      </div>
-      <div class="input_field">
-          <input type="text" placeholder="Subject" id="subject">
-      </div>
-      <div class="input_field">
-          <input type="text" placeholder="Phone" id="phone">
-      </div>
-      <div class="input_field">
-          <input type="text" placeholder="Email" id="email">
-      </div>
-      <div class="input_field">
-          <textarea placeholder="Message" id="message"></textarea>
-      </div>
-      <div class="btn">
-          <input type="submit">
-      </div>
-    </form>
-  </div>
+<div style="background-image: url('/assets/images/contact.jpg');height:700px;width:100%;" >
+<app-nav></app-nav>
+<div id="layoutSidenav">
+		
+	<div id="layoutSidenav_content">
+		<main>
+			<div class="card bg-success"
+				style="width: 50%; margin-left:25%; margin-top: 10%; border-radius: 10px">
+				<div class="card-header text-center text-light font-weight-bolder">Contact
+					Us</div>
+				<div class="card-body bg-light" style="border-radius: 10px;">
+					<form>
+						<div class="row">
+							<div class="col-sm-12" style="align-content: center;">
+								<input type="hidden"  name="id" id="id" hidden="" />
+							</div>
+						</div>
+						
+						
+						<div class="row " style= " align-content: center;">
+							<div class="col-sm-4 text-left" style="margin-left: 2%; align-content: center;">
+								<p class="text-dark">
+									<label for="Name">Name :</label>
+								</p>
+							</div>
+							<div class="col-sm-4 text-left">
+								<div class="input-group mb-6 ">
+									<input type="text" class="form-control" id="firstName"
+										name="firstName" placeholder="Enter First Name"
+										aria-label="firstName" aria-describedby="basic-addon2"
+										required="required">
+								</div>
+							</div>
+						</div>
+						
+				
+						
+						<div class="row">
+							<div class="col-sm-4 text-left" style="margin-left: 2%">
+								<p class="text-dark">
+									<label for="email">Email :</label>
+								</p>
+							</div>
+							<div class="col-sm-4 text-left">
+								<div class="input-group mb-6 ">
+									<input class="form-control" id="email" name="email"
+										placeholder="Enter Email" type="email"
+										aria-label="email" aria-describedby="basic-addon2"
+										required="required">
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="row">
+							<div class="col-sm-4 text-left" style="margin-left: 2%"><p class="text-dark">
+									<label for="message">Message :</label>
+								</p></div>
+
+							<div class="col-sm-6 text-left">
+
+								<div class="input-group mb-6 ">
+								<textarea rows="4" cols="50" id="message" name="message" 
+										placeholder="Enter Message" required class="form-control"></textarea>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="row">
+							<div class="col-sm-12 text-right">
+								<div style="color: red; font-size: 12px; margin-right: 15%">
+									<label id="warningLabel" name="warningLabel"></label>
+								</div>
+							</div>
+						</div>
+						
+						
+						<div class="row">
+							<div class="col-sm-4 text-left" style="margin-left: 2%">
+								<p class="text-dark">
+									<label for="phoneNumber">Phone Number :</label>
+								</p>
+							</div>
+
+							<div class="col-sm-4 text-left">
+
+								<div class="input-group mb-6 ">
+									<input id="phone" name="phoneNumber"
+										placeholder="phone number" required tabindex="9" type="tel"
+										pattern="[0-9]{10}" class="form-control"
+										aria-label="lastName" aria-describedby="basic-addon2">
+
+								</div>
+							</div>
+						</div>
+
+
+						
+							
+						
+						<div class="row">
+							<div class="col-sm-12 text-center text-dark" >
+								<input onclick="return validate()" id="regButton" type="submit"
+									tabindex="17" value="Submit"
+									class="btn btn-outline-success my-2 my-sm-0  text-dark c ">
+							</div>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</main>
+		
+	</div>
+</div>
+<app-footer></app-footer>
+</div>

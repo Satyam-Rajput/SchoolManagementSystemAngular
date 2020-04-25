@@ -1,0 +1,87 @@
+<div style="background-image: url('/assets/images/admin.jpg');height:100%;width:100%;" >
+<app-admin-navbar></app-admin-navbar>
+<div id="layoutSidenav">
+
+<app-sidebar-admin></app-sidebar-admin>
+
+<div id="layoutSidenav_content">
+    <main>
+        <div class="card " style="width:85%;margin-left:7%;margin-top:1%;">
+            <div class="card-header bg-success text-light text-center font-weight-bold">
+              View Student Details
+            </div>
+            <br/>
+            <div class="card-body">
+           
+                
+                                          <br/>
+                                          
+                                          
+          
+          
+          
+            <div *ngIf="student!=null">
+            
+          <div class="row text-left">
+          
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold ">Name:</div>
+          <div class="col-md-3 text-dark">{{student.firstName}}&nbsp;{{student.lastName}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Father's Name:</div>
+          <div class="col-md-3 text-dark">{{student.fatherName}}</div>
+          <div class="col-md-3"></div></div><br/><div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Class :</div>
+          <div class="col-md-3 text-dark">{{student.studentClass}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Email ID :</div>
+          <div class="col-md-3 text-dark">{{student.email}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Contact No :</div>
+          <div class="col-md-3 text-dark">{{student.phoneNumber}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Address :</div>
+          <div class="col-md-5 text-dark">{{student.houseNumber}},&nbsp;{{student.streetName}},&nbsp;{{student.city}},&nbsp;{{student.state}},&nbsp;{{student.country}}-{{student.pincode}}</div>
+          <div class="col-md-1"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Date Of Birth :</div>
+          <div class="col-md-3 text-dark">{{student.dateOfBirth}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Date Of Joining :</div>
+          <div class="col-md-3 text-dark">{{student.dateofJoining}}</div>
+          <div class="col-md-3"></div></div><br/>
+        </div>    
+          <div class="row ">
+        
+          &nbsp;&nbsp;&nbsp;
+          
+          <div class="col-sm-12 text-dark text-center"><a  class="btn btn-secondary badge-pill" routerLink="/display-student" style="width:100px" href="">Back</a></div>
+    
+          
+             </div>
+                               
+
+                      </div>  
+                       </div>
+          
+                          
+                          
+                          
+        </main>  
+    
+<app-footer></app-footer>
+</div>
+</div></div>
+                

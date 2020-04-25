@@ -1,66 +1,34 @@
-<div id="layoutSidenav">
-    <div id="layoutSidenav_nav">
-        <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-            <div class="sb-sidenav-menu">
-                <div class="nav">
-                    <div class="sb-sidenav-menu-heading"></div>
-                    <a class="nav-link" routerLink="/admin">
-                        <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                        <b>Dashboard</b>
-                    </a>
-                    <div class="sb-sidenav-menu-heading">Teacher</div>
+<div style="background-image: url('/assets/images/admin.jpg');height:100%;width:100%;" >
+        <app-admin-navbar></app-admin-navbar>
+        <div id="layoutSidenav">
+        
+        <app-sidebar-admin></app-sidebar-admin>
+        
+        <div id="layoutSidenav_content">
+           
+          <main>
+            
+            
+            <div class="header">
+            <h2>Important Notice</h2>
+          </div>
+          <div class="row">
+            <div class="leftcolumn">
+              <div class="card">
+                <h2>Covid-19 update</h2>
+                
+                <p><b>notice:</b></p><p>Due to the spread of covid-19,All School have been shut down until further notice by the HRD Ministry.</p>
+          </div></div></div>
+        
 
-                    <a class="nav-link" routerLink="/add-teacher">
-                        <div class="sb-nav-link-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
-                        Add Teachers
-                    </a><a class="nav-link" routerLink="/display-teacher">
-                        <div class="sb-nav-link-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
-                        Display Teacher Details
-                    </a>
-                    <a class="nav-link" routerLink="/find-teacher">
-                        <div class="sb-nav-link-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
-                        Find Teacher Details
-                    </a>
-
-                    <div class="sb-sidenav-menu-heading">Student</div>
-
-                    <a class="nav-link" routerLink="/add-student">
-                        <div class="sb-nav-link-icon"><i class="fa fa-plus" aria-hidden="true"></i></div>
-                        Add Students
-                    </a><a class="nav-link" routerLink="/display-student">
-                        <div class="sb-nav-link-icon"><i class="fa fa-bars" aria-hidden="true"></i></div>
-                        Display Student Details
-                    </a>
-                    <a class="nav-link" routerLink="/find-student">
-                        <div class="sb-nav-link-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
-                        Find Student Details
-                    </a>
-                   
-                    
-                </div>
-            </div>
-        </nav>
-    </div>
-    <main>
-
-        <div class="row">
-            <div class="col-md-6 my-3">
-                <div class=" sb-sidenav-dark px-3 py-3">
-                    <h4 class="mb-2">Total Number of Teachers
-                        : {{user1}}</h4>
-    
-                </div>
-            </div>
-            <div class="col-md-6 my-3">
-                <div class=" sb-sidenav-dark px-3 py-3">
-                    <h4 class="mb-2">Total Number of Students
-                        : {{user1.email}}</h4>
-    
-                </div>
-            </div>
-        </div>
-    </main>
-  
-</div>
-
-    
+          <div class="row">
+            <div class="leftcolumn">
+              <div class="card">
+                <h2> Updates on Online Classes</h2>
+                
+                <p><b>notice:</b></p><p>Arrangement of the online classes should be done by the date 05/05/2020. </p>
+          </div></div></div>
+        
+        </main>
+        <app-footer></app-footer>
+        </div></div></div>

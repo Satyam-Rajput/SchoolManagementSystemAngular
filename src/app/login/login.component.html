@@ -1,4 +1,4 @@
-<div class="container col-lg-6">
+<!--<div class="container col-lg-6">
     <h1 class="text-center">Login</h1>
     <div class="card">
       <div class="card-body">
@@ -19,3 +19,62 @@
       </div>
     </div>
   </div>
+
+
+-->
+<div class="page-container">
+<div style="background-image: url('/assets/images/login.jpg');height:700px;width:100%;" class="content-wrap">
+<app-nav></app-nav>
+
+  <div class="card bg-success" style="width: 30%;margin-left: 35% ; margin-top: 12%;border-radius: 10px">
+    <div class="card-header text-center text-light">
+      LOGIN
+    </div>
+    <div class="card-body bg-light" style="border-radius: 15px">
+  <form >
+  
+              
+              <div class="row ">
+              
+            &nbsp;&nbsp;	<div class="col-sm-5 text-center">
+              <p class="text-dark"><label for="email">Email</label></p>
+  </div>
+  
+  <div class="col-sm-6 text-left">
+  <!--  <input id="email" name="email" placeholder="Enter Email" required tabindex="1" type="email">-->
+  
+  <div class="input-group mb-6 ">
+    <input type="email" required="required" class="form-control" [(ngModel)]="user.email" id="email" name="email" placeholder="Enter email" tabindex="1" aria-label="email" aria-describedby="basic-addon2">
+    
+  </div>
+  </div></div>
+  
+  
+              <div class="row"><div class="col-sm-1  text-center" ></div>
+            <div class="col-sm-4  text-center" >
+              <p class="text-dark"><label for="password">Password</label></p>
+  </div>
+  
+  &nbsp;&nbsp;<div class="col-sm-6 ">
+  <!--  <input id="password" name="password" placeholder="Enter password" required tabindex="2" type="password">-->
+  
+  <div class="input-group mb-3">
+    <input type="password" class="form-control" required="required" [(ngModel)]="user.password"   id="password" name="password" tabindex="2" placeholder="Enter password" aria-label="password" aria-describedby="basic-addon2">
+    
+  </div>
+  
+  </div></div>
+          
+          <div class="row"><div class="col-sm-12 text-danger text-center" style="font-size:15px;font-style: italic; "><label id="warningLabel" name="warningLabel">{{error}}</label></div></div>
+              
+              <div class="row"><div class="col-sm-12 text-center text-dark"><input (click)="onSubmit()" type="submit" tabindex="3" value="Login" class="btn btn-outline-success my-2 my-sm-0  text-dark">
+              </div></div>
+              
+              
+              
+              
+            </form>
+    </div>
+  </div><app-footer></app-footer> </div>
+  
+ </div>

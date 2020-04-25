@@ -1,0 +1,88 @@
+
+
+
+
+
+<div style="background-image: url('/assets/images/admin.jpg');height:100%;width:100%;" >
+<app-admin-navbar></app-admin-navbar>
+<div id="layoutSidenav">
+
+<app-sidebar-admin></app-sidebar-admin>
+
+<div id="layoutSidenav_content">
+   
+    <main>
+
+
+
+
+                 
+        <div class="card " style="width:85%;margin-left:7%;margin-top:3%;">
+            <div class="card-header bg-success text-light text-center font-weight-bold">
+              View Teacher Details
+            </div>
+            <br/>
+            <div class="card-body">
+            
+                                          <br/>
+                                          
+          
+          
+                                          
+                                          
+                                
+            
+            <br/>
+            <div *ngIf="teacher!=null">
+          <div class="row text-left">
+          
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Name:</div>
+          <div class="col-md-3 text-dark">{{teacher.firstName}}&nbsp;{{teacher.lastName}}</div>
+          <div class="col-md-3"></div></div><br/>
+          
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Email ID :</div>
+          <div class="col-md-3 text-dark">{{teacher.email}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Contact No :</div>
+          <div class="col-md-3 text-dark">{{teacher.phoneNumber}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Address :</div>
+          <div class="col-md-5 text-dark">{{teacher.houseNumber}},&nbsp;{{teacher.streetName}},&nbsp;{{teacher.city}},&nbsp;{{teacher.state}},&nbsp;{{teacher.country}}-{{teacher.pincode}}</div>
+          <div class="col-md-1"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Date Of Birth :</div>
+          <div class="col-md-3 text-dark">{{teacher.dateOfBirth}}</div>
+          <div class="col-md-3"></div></div><br/>
+          <div class="row text-left">
+          <div class="col-md-3"></div>
+          <div class="col-md-3 text-dark font-weight-bold">Date Of Joining :</div>
+          <div class="col-md-3 text-dark">{{teacher.dateofJoining}}</div>
+          <div class="col-md-3"></div></div><br/>
+          
+        </div> 
+          <div class="row ">
+         
+          &nbsp;&nbsp;&nbsp;
+         
+          <div  class="col-sm-12 text-dark text-center"><a   class="btn btn-secondary badge-pill" style="width:100px" [routerLink]="['/display-teacher']" routerLinkActive="router-link-active" >Back</a></div>
+          
+          
+         
+                             
+                </div>                          
+             </div>
+          </div>
+        
+        
+        </main>
+<app-footer></app-footer>
+</div>
+</div></div>

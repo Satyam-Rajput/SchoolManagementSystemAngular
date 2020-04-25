@@ -10,8 +10,9 @@ import { Employee } from '../employee';
 export class AddTeacherComponent implements OnInit {
   result:boolean=false;
   confirmPassword:string;
+error:string;
   teacher:Employee;
-  
+  output:string;
   constructor(private router:Router,private route:ActivatedRoute,private service:AdminServiceService ) { }
 
 
@@ -21,21 +22,22 @@ export class AddTeacherComponent implements OnInit {
   }
   onSubmit()
   {
-    if(this.teacher.password==this.confirmPassword){
-    this.service.saveTeacher(this.teacher).subscribe(data=>{this.result=data},error=>console.log(error));
+    if(this.teacher.password==this.confirmPassword&&this.confirmPassword!=null&&this.confirmPassword!=""){
+    this.service.saveTeacher(this.teacher).subscribe(data=>{this.result=data;console.log(data)},error=>console.log(error));
     
     if(this.result)
     {
-      alert("success")
-      this.router.navigate(['admin']);
+      this.output="successfully Registered";
+     
     }
+
     else
     {
-     alert("failure")
+     this.output="Email already exists"
     }}
     else
     {
-      alert("password doesn't match")
+      this.error="password doesn't match"
     }
     
   }
